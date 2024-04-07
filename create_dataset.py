@@ -28,9 +28,9 @@ def create_yolov9_dataset(src_img_dir, src_label_dir, dst_dir, test_size=0.2):
     print('Dataset created successfully.')
 
 # 设置源目录和目标目录
-src_img_dir = 'resources/img'
-src_label_dir = 'resources/label'
-dst_dir = 'dataset'
+src_img_dir = '/Users/muzian/Desktop/AIDM7340/raw_dataset/img'
+src_label_dir = '/Users/muzian/Desktop/AIDM7340/raw_dataset/label'
+dst_dir = '/Users/muzian/Desktop/AIDM7340/dataset'
 
 # 创建数据集
 create_yolov9_dataset(src_img_dir, src_label_dir, dst_dir)

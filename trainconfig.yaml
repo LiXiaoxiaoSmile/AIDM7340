@@ -1,6 +1,6 @@
-path: 'C:\Users\LQA\Desktop\class\Lxx\dataset'
-train: 'C:\Users\LQA\Desktop\class\Lxx\dataset\images\train'
-val: 'C:\Users\LQA\Desktop\class\Lxx\dataset\images\val'
+path: 'dataset'
+train: 'dataset/images/train'
+val: 'dataset/images/val'
 names:
-  0: With_Helmet
-  1: Without_Helmet
+  0: Without_Helmet
+  1: With_Helmet

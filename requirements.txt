@@ -2,3 +2,4 @@ ultralytics
 pyqt5
 labelimg
 scikit-learn
+tqdm
