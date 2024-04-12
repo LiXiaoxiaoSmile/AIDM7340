@@ -3,10 +3,10 @@ from PIL import Image
 import torch
 
 # Load a pretrained YOLOv8n model
-model = YOLO(r'/Users/appmacbook/Desktop/AIDM7340/yolov8n.pt')
+model = YOLO(r'runs/detect/AIDM7340-GroupProject-2024-04-12-BestRun/weights/best.pt')
 
 # Define path to video file
-source = r'sample/474288614-1-208.mp4'
+source = r'sample/328907506-1-16.mp4'
 
 if torch.backends.mps.is_built():
     print("Apple Device GPU Detect, Using MPS for Speed Up.")
@@ -20,13 +20,16 @@ else:
 
 
 # Run inference on the source
-results = model(source, stream=True, show=True, save=True, save_conf=True, device=device)  # generator of Results objects
+results = model(source, stream=True, show=True, save=True, save_conf=True, device=device, imgsz=1280, visualize=False, retina_masks=True)  # generator of Results objects
+# results = model(source, stream=True, show=False, save=True, save_conf=True, device=device, imgsz=1280, visualize=False, retina_masks=True) # Colab cannot show the demo
+
 
 for r in results:
     boxes = r.boxes  # Boxes object for bbox outputs
     masks = r.masks  # Masks object for segment masks outputs
     probs = r.probs  # Class probabilities for classification outputs
 
+'''
 # Visualize the results
 for i, r in enumerate(results):
     # Plot results image
@@ -38,3 +41,4 @@ for i, r in enumerate(results):
 
     # Save results to disk
     r.save(filename=f'results{i}.jpg')
+'''
