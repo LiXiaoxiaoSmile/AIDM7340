@@ -1,0 +1,5 @@
+train: '/content/AIDM7340/datasets/images/train'
+val: '/content/AIDM7340/datasets/images/val'
+names:
+  0: Without_Helmet
+  1: With_Helmet
