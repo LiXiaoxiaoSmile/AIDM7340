@@ -8,7 +8,7 @@ local_train_config_filepath = r'./datasets/trainconfig-local.yaml'
 colab_train_config_filepath = r'/content/AIDM7340/datasets/trainconfig-colab.yaml'
 
 epoch = 100
-imgsize = 640
+imgsize = 1280
 
 result_name = f'AIDM7340-GroupProject-{datetime.now()}'
 
